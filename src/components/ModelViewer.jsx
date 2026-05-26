@@ -30,18 +30,24 @@ function STLModel({ url, color = '#9C8B7A', autoRotate, modelRef }) {
     if (modelRef) modelRef.current = meshRef.current;
   });
 
-  // Geometriyi normalize et (merkeze al, normalleri hesapla)
+  // Geometriyi normalize et (CAD Z-up'tan Three.js Y-up'a cevir, merkeze al, olcekle)
   const processedGeometry = useMemo(() => {
     const g = geometry.clone();
+    // CAD yazilimlari (Fusion 360, Solidworks vb.) Z-up koordinat sistemi kullanir.
+    // Three.js Y-up kullaniyor — modeli dik tutmak icin X ekseni etrafinda -90 derece dondur
+    const rotationMatrix = new THREE.Matrix4().makeRotationX(-Math.PI / 2);
+    g.applyMatrix4(rotationMatrix);
+
     g.computeVertexNormals();
     g.computeBoundingBox();
     g.center();
-    // Modeli makul boyuta ölçekle
+
+    // Modeli makul boyuta olcekle
     const bbox = g.boundingBox;
     const size = new THREE.Vector3();
     bbox.getSize(size);
     const maxDim = Math.max(size.x, size.y, size.z);
-    const scale = 2 / maxDim; // Sahne içinde ~2 birim boyut
+    const scale = 2.4 / maxDim; // Sahne icinde ~2.4 birim boyut (biraz daha buyuk)
     g.scale(scale, scale, scale);
     return g;
   }, [geometry]);
