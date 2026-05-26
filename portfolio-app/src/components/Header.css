@@ -1,0 +1,222 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: rgba(232, 227, 220, 0.92);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  background: rgba(232, 227, 220, 0.96);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  min-height: 72px;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-accent);
+}
+
+.logo-mark { display: inline-flex; }
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  color: var(--color-text);
+}
+
+.logo-sub {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.primary-nav { display: none; }
+
+@media (min-width: 900px) {
+  .primary-nav { display: block; }
+}
+
+.primary-nav ul {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.primary-nav a {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: var(--space-2) 0;
+  color: var(--color-text);
+  transition: color var(--duration) var(--ease);
+}
+
+.primary-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width var(--duration) var(--ease);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible,
+.primary-nav a.is-active {
+  color: var(--color-accent);
+}
+
+.primary-nav a:hover::after,
+.primary-nav a:focus-visible::after,
+.primary-nav a.is-active::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  background: transparent;
+  min-height: 36px;
+  transition: all var(--duration) var(--ease);
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text);
+}
+
+@media (min-width: 900px) {
+  .menu-trigger { display: none; }
+}
+
+/* ============ Mobile menu ============ */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-close {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-inverse);
+}
+
+.mobile-menu nav { width: 100%; }
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.mobile-menu li {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.mobile-menu.is-open li {
+  animation: menuItemIn 500ms var(--ease) forwards;
+}
+
+@keyframes menuItemIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-text-inverse);
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:focus-visible,
+.mobile-menu a.is-active {
+  color: var(--color-accent-light);
+}
+
+.mobile-menu .num {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-accent-light);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
