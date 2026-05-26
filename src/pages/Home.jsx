@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container hero-inner">
           <div className="hero-frame">
             <div className="hero-illustration">
-              <img src="/images/general/hand-sketch.png" alt="Hand drawing with a pencil" className="hand-sketch" />
+              <img src="images/general/hand-sketch.png" alt="Hand drawing with a pencil" className="hand-sketch" />
             </div>
 
             <p className="eyebrow hero-eyebrow">{t.home.eyebrow}</p>

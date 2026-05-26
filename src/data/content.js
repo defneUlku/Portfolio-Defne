@@ -242,8 +242,8 @@ export const projects = [
     title: 'AquaPaws',
     type: 'individual',
     year: '2024',
-    cover: '/images/projects/aquapaws/cover.png',
-    model: '/models/aquapaws.stl',
+    cover: 'images/projects/aquapaws/cover.png',
+    model: 'models/aquapaws.stl',
     tagline: {
       en: 'Atmospheric water for animals and people, outdoors.',
       tr: 'Hayvanlar ve insanlar için açık havada atmosferik su.',
@@ -255,7 +255,7 @@ export const projects = [
     sections: [
       {
         title: { en: 'How the AWG System Works', tr: 'AWG Sistemi Nasıl Çalışır?' },
-        image: '/images/projects/aquapaws/intro.png',
+        image: 'images/projects/aquapaws/intro.png',
         steps: [
           { en: 'Air from the atmosphere', tr: 'Atmosferden hava' },
           { en: '3-layer air filter', tr: '3 katmanlı hava filtresi' },
@@ -267,7 +267,7 @@ export const projects = [
       },
       {
         title: { en: 'Interaction', tr: 'Etkileşim' },
-        image: '/images/projects/aquapaws/how-it-works.png',
+        image: 'images/projects/aquapaws/how-it-works.png',
         body: {
           en: 'The product radiates a frequency that only animals can detect. When the animal approaches, sensors detect it and water is dispensed. For humans, a foot pedal triggers water flow.',
           tr: 'Ürün sadece hayvanların algılayabildiği bir frekans yayar. Hayvan yaklaştığında sensörler algılar ve su verilir. İnsanlar için bir ayak pedalı su akışını başlatır.',
@@ -276,9 +276,9 @@ export const projects = [
       {
         title: { en: 'Components', tr: 'Bileşenler' },
         images: [
-          '/images/projects/aquapaws/sensor.png',
-          '/images/projects/aquapaws/parts.png',
-          '/images/projects/aquapaws/barrier.png',
+          'images/projects/aquapaws/sensor.png',
+          'images/projects/aquapaws/parts.png',
+          'images/projects/aquapaws/barrier.png',
         ],
         captions: {
           en: [
@@ -295,7 +295,7 @@ export const projects = [
       },
       {
         title: { en: 'Final Render', tr: 'Final Render' },
-        image: '/images/projects/aquapaws/final.png',
+        image: 'images/projects/aquapaws/final.png',
       },
     ],
   },
@@ -305,7 +305,7 @@ export const projects = [
     title: 'SkyIron',
     type: 'individual',
     year: '2024',
-    cover: '/images/projects/skyiron/cover.png',
+    cover: 'images/projects/skyiron/cover.png',
     tagline: {
       en: 'A vertical steam iron inspired by Yamaha motorcycle aesthetics.',
       tr: 'Yamaha motosiklet estetiğinden ilham alan dikey buhar ütüsü.',
@@ -317,15 +317,15 @@ export const projects = [
     sections: [
       {
         title: { en: 'Inspiration', tr: 'İlham' },
-        image: '/images/projects/skyiron/inspiration.png',
+        image: 'images/projects/skyiron/inspiration.png',
       },
       {
         title: { en: 'Form Study', tr: 'Form Çalışması' },
-        image: '/images/projects/skyiron/render-1.png',
+        image: 'images/projects/skyiron/render-1.png',
       },
       {
         title: { en: 'Components', tr: 'Bileşenler' },
-        image: '/images/projects/skyiron/parts.png',
+        image: 'images/projects/skyiron/parts.png',
         captions: {
           en: [
             'Indicator light turns on when steam is ready.',
@@ -339,7 +339,7 @@ export const projects = [
       },
       {
         title: { en: 'Render', tr: 'Render' },
-        image: '/images/projects/skyiron/render-2.png',
+        image: 'images/projects/skyiron/render-2.png',
       },
     ],
   },
@@ -349,7 +349,7 @@ export const projects = [
     title: 'AirStride',
     type: 'group2',
     year: '2024',
-    cover: '/images/projects/airstride/cover.png',
+    cover: 'images/projects/airstride/cover.png',
     tagline: {
       en: 'A sculptural air-cleaning system for shared spaces.',
       tr: 'Ortak alanlar için heykelsi bir hava temizleme sistemi.',
@@ -361,11 +361,11 @@ export const projects = [
     sections: [
       {
         title: { en: 'Concept', tr: 'Konsept' },
-        image: '/images/projects/airstride/intro.png',
+        image: 'images/projects/airstride/intro.png',
       },
       {
         title: { en: 'Two Functions', tr: 'İki Fonksiyon' },
-        image: '/images/projects/airstride/parts.png',
+        image: 'images/projects/airstride/parts.png',
         body: {
           en: 'The unit combines a vacuuming part and a blowing part — together they create a controlled air current that captures dust and circulates clean air.',
           tr: 'Ünite bir emme parçası ve bir üfleme parçasını birleştirir — birlikte tozu yakalayan ve temiz havayı dolaştıran kontrollü bir hava akımı oluştururlar.',
@@ -373,7 +373,7 @@ export const projects = [
       },
       {
         title: { en: 'Concept Analysis', tr: 'Konsept Analizi' },
-        image: '/images/projects/airstride/scheme.png',
+        image: 'images/projects/airstride/scheme.png',
         body: {
           en: 'A full product scheme mapping working modes, control flow, purchasing experience, modules, textures, colours and form references.',
           tr: 'Çalışma modları, kontrol akışı, satın alma deneyimi, modüller, dokular, renkler ve form referanslarını haritalayan tam bir ürün şeması.',
@@ -381,11 +381,11 @@ export const projects = [
       },
       {
         title: { en: 'Internal Structure', tr: 'İç Yapı' },
-        image: '/images/projects/airstride/internal.png',
+        image: 'images/projects/airstride/internal.png',
       },
       {
         title: { en: 'Companion Dashboard', tr: 'Yardımcı Panel' },
-        image: '/images/projects/airstride/dashboard.png',
+        image: 'images/projects/airstride/dashboard.png',
         body: {
           en: 'Users monitor filter status, dust bin level, fan speed, human-interaction insights, location and energy use, plus real-time air-quality data (PM2.5, humidity, temperature, airflow).',
           tr: 'Kullanıcılar filtre durumunu, toz haznesi seviyesini, fan hızını, insan etkileşimi içgörülerini, konum ve enerji kullanımını ve gerçek zamanlı hava kalitesi verilerini (PM2.5, nem, sıcaklık, hava akışı) izler.',
@@ -399,7 +399,7 @@ export const projects = [
     title: 'Zobox',
     type: 'individual',
     year: '2025',
-    cover: '/images/projects/zobox/cover.png',
+    cover: 'images/projects/zobox/cover.png',
     tagline: {
       en: 'A fully autonomous 4-channel self-checkout and packaging station.',
       tr: 'Tamamen otonom, 4 kanallı self-checkout ve paketleme istasyonu.',
@@ -411,14 +411,14 @@ export const projects = [
     sections: [
       {
         title: { en: 'In Context', tr: 'Bağlam İçinde' },
-        image: '/images/projects/zobox/intro.png',
+        image: 'images/projects/zobox/intro.png',
       },
       {
         title: { en: 'Renders', tr: 'Renderlar' },
         images: [
-          '/images/projects/zobox/render-1.png',
-          '/images/projects/zobox/render-2.png',
-          '/images/projects/zobox/render-3.png',
+          'images/projects/zobox/render-1.png',
+          'images/projects/zobox/render-2.png',
+          'images/projects/zobox/render-3.png',
         ],
       },
     ],
@@ -429,7 +429,7 @@ export const projects = [
     title: 'Zest',
     type: 'group7',
     year: '2025',
-    cover: '/images/projects/zest/cover.png',
+    cover: 'images/projects/zest/cover.png',
     tagline: {
       en: 'A marine delivery ecosystem for coastal areas and yachts.',
       tr: 'Kıyı alanları ve yatlar için bir deniz teslimat ekosistemi.',
@@ -441,19 +441,19 @@ export const projects = [
     sections: [
       {
         title: { en: 'Concept Render', tr: 'Konsept Render' },
-        image: '/images/projects/zest/render-1.png',
+        image: 'images/projects/zest/render-1.png',
       },
       {
         title: { en: 'User Scenario', tr: 'Kullanıcı Senaryosu' },
-        image: '/images/projects/zest/scenario.png',
+        image: 'images/projects/zest/scenario.png',
       },
       {
         title: { en: 'Approach', tr: 'Yaklaşım' },
-        image: '/images/projects/zest/intro.png',
+        image: 'images/projects/zest/intro.png',
       },
       {
         title: { en: 'In the Bay', tr: 'Koyda' },
-        image: '/images/projects/zest/render-2.png',
+        image: 'images/projects/zest/render-2.png',
       },
     ],
   },
@@ -463,7 +463,7 @@ export const projects = [
     title: 'Indep',
     type: 'individual',
     year: '2025',
-    cover: '/images/projects/indep/cover.png',
+    cover: 'images/projects/indep/cover.png',
     tagline: {
       en: 'An experience-oriented outdoor heating unit.',
       tr: 'Deneyim odaklı, dış mekan ısıtma ünitesi.',
@@ -475,11 +475,11 @@ export const projects = [
     sections: [
       {
         title: { en: 'In Context', tr: 'Bağlam İçinde' },
-        image: '/images/projects/indep/intro.png',
+        image: 'images/projects/indep/intro.png',
       },
       {
         title: { en: 'Features', tr: 'Özellikler' },
-        image: '/images/projects/indep/render-1.png',
+        image: 'images/projects/indep/render-1.png',
         body: {
           en: '360-degree rotating mechanism and integrated LED lighting create a warm gathering space.',
           tr: '360 derece dönen mekanizma ve entegre LED aydınlatma sıcak bir buluşma alanı yaratır.',
@@ -487,7 +487,7 @@ export const projects = [
       },
       {
         title: { en: 'Render', tr: 'Render' },
-        image: '/images/projects/indep/render-2.png',
+        image: 'images/projects/indep/render-2.png',
       },
     ],
   },
