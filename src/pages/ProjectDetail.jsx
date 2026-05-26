@@ -7,7 +7,7 @@ import { useLang, tr } from '../context/LanguageContext.jsx';
 import { projects, projectTypes } from '../data/content';
 import './ProjectDetail.css';
 
-// 3D viewer'i lazy-load: sadece model olan projelerde indir
+// 3D viewer'ı lazy-load: sadece model olan projelerde indir
 const ModelViewer = lazy(() => import('../components/ModelViewer.jsx'));
 
 export default function ProjectDetail() {
@@ -69,13 +69,13 @@ export default function ProjectDetail() {
             >
               <Box className="project-section-icon" size={24} aria-hidden="true" />
               <h2 id="model-heading">
-                {lang === 'en' ? 'Interactive 3D Model' : 'Interaktif 3D Model'}
+                {lang === 'en' ? 'Interactive 3D Model' : 'İnteraktif 3D Model'}
               </h2>
             </motion.header>
             <p className="project-section-body">
               {lang === 'en'
                 ? 'Explore the design from every angle. Drag to rotate, scroll to zoom, and switch materials to see how the form responds to different finishes.'
-                : 'Tasarimi her acidan inceleyin. Dondurmek icin surukleyin, yakinlastirmak icin kaydirin ve formun farkli yuzeylere nasil tepki verdigini gormek icin malzemeleri degistirin.'}
+                : 'Tasarımı her açıdan inceleyin. Döndürmek için sürükleyin, yakınlaştırmak için kaydırın ve formun farklı yüzeylere nasıl tepki verdiğini görmek için malzemeleri değiştirin.'}
             </p>
             <Suspense fallback={<div className="model-viewer model-viewer-loading" />}>
               <ModelViewer url={project.model} title={project.title} />

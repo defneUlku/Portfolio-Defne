@@ -116,7 +116,7 @@ export default function Home() {
             <p className="serif quote">
               {lang === 'en'
                 ? '"Designing sustainable, human-centered products that bridge form, function and feeling."'
-                : '"Form, islev ve duygu arasinda kopru kuran, surdurulebilir ve insan odakli urunler."'}
+                : '"Form, işlev ve duygu arasında köprü kuran, sürdürülebilir ve insan odaklı ürünler."'}
             </p>
           </div>
         </div>
