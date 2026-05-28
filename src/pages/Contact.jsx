@@ -16,9 +16,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Demo davranışı — mailto açar
-    const subject = encodeURIComponent(`Portfolio contact — ${form.name}`);
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`);
+    // Demo davranışı - mailto açar
+    const subject = encodeURIComponent(`Portfolio contact - ${form.name}`);
+    const body = encodeURIComponent(`${form.message}\n\n- ${form.name}\n${form.email}`);
     window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
     setSent(true);
     setTimeout(() => setSent(false), 5000);

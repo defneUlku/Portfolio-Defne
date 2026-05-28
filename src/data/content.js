@@ -16,67 +16,39 @@ export const personal = {
 
 export const ui = {
   en: {
-    nav: {
-      home: 'Home',
-      about: 'About',
-      projects: 'Projects',
-      contact: 'Contact',
-      menu: 'Menu',
-      close: 'Close menu',
-    },
+    nav: { home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact', menu: 'Menu', close: 'Close menu' },
     common: {
-      viewProject: 'View Project',
-      backToProjects: 'Back to Projects',
-      nextProject: 'Next Project',
-      previousProject: 'Previous Project',
-      downloadCV: 'Download Portfolio',
-      getInTouch: 'Get in Touch',
-      scrollDown: 'Scroll down',
-      learnMore: 'Learn more',
-      languageLabel: 'Language',
-      themeLabel: 'Theme',
-      switchTo: 'Switch to',
+      viewProject: 'View Project', backToProjects: 'Back to Projects',
+      nextProject: 'Next Project', previousProject: 'Previous Project',
+      downloadCV: 'Download Portfolio', getInTouch: 'Get in Touch',
+      scrollDown: 'Scroll down', learnMore: 'Learn more',
+      languageLabel: 'Language', themeLabel: 'Theme', switchTo: 'Switch to',
     },
     home: {
       eyebrow: 'Industrial Design Portfolio',
-      titleA: 'Portfolio',
-      titleB: 'Industrial Design',
+      titleA: 'Portfolio', titleB: 'Industrial Design',
       tagline: 'Designing sustainable, human-centered products that bridge form, function and feeling.',
-      ctaPrimary: 'Explore Projects',
-      ctaSecondary: 'About Me',
-      featuredEyebrow: 'Selected Work',
-      featuredTitle: 'Content of products',
-      aboutPreviewEyebrow: 'About',
-      aboutPreviewCta: 'Read more',
+      ctaPrimary: 'Explore Projects', ctaSecondary: 'About Me',
+      featuredEyebrow: 'Selected Work', featuredTitle: 'Content of products',
+      aboutPreviewEyebrow: 'About', aboutPreviewCta: 'Read more',
     },
     about: {
-      eyebrow: 'About Me',
-      title: 'Ülkü Defne Akın',
+      eyebrow: 'About Me', title: 'Ülkü Defne Akın',
       bio: 'I am an industrial design student at Izmir University of Economics. I have a patient and disciplined approach to long-term projects. I work well with group projects and possess leadership qualities. I can approach subjects with different perspectives. I am enthusiastic and eager to learn, therefore I can be a good intern.',
-      educationTitle: 'Education',
-      experienceTitle: 'Experience',
-      digitalSkillsTitle: 'Digital Skills',
-      analogueSkillsTitle: 'Analogue Skills',
+      educationTitle: 'Education', experienceTitle: 'Experience',
+      digitalSkillsTitle: 'Digital Skills', analogueSkillsTitle: 'Analogue Skills',
     },
     projects: {
-      eyebrow: 'Selected Work',
-      title: 'Projects',
-      filterAll: 'All',
-      filterIndividual: 'Individual',
-      filterGroup: 'Group',
+      eyebrow: 'Selected Work', title: 'Projects',
+      filterAll: 'All', filterIndividual: 'Individual', filterGroup: 'Group',
       typeIndividual: 'Individual Project',
-      typeGroup2: '2-person group project',
-      typeGroup7: '7-person group project',
+      typeGroup2: '2-person group project', typeGroup7: '7-person group project',
     },
     contact: {
-      eyebrow: 'Get in Touch',
-      title: "Let's create something together",
+      eyebrow: 'Get in Touch', title: "Let's create something together",
       subtitle: 'Open to internships, collaborations and conversations about design.',
-      nameLabel: 'Your name',
-      emailLabel: 'Your email',
-      messageLabel: 'Your message',
-      submit: 'Send message',
-      sent: 'Message sent — thank you.',
+      nameLabel: 'Your name', emailLabel: 'Your email', messageLabel: 'Your message',
+      submit: 'Send message', sent: 'Message sent - thank you.',
       directContact: 'Or reach me directly',
     },
     footer: {
@@ -84,74 +56,42 @@ export const ui = {
       copyright: '© 2026 Ülkü Defne Akın. All rights reserved.',
       backToTop: 'Back to top',
     },
-    notFound: {
-      title: '404',
-      message: 'This page seems to have wandered off.',
-      back: 'Back home',
-    },
+    notFound: { title: '404', message: 'This page seems to have wandered off.', back: 'Back home' },
   },
   tr: {
-    nav: {
-      home: 'Anasayfa',
-      about: 'Hakkımda',
-      projects: 'Projeler',
-      contact: 'İletişim',
-      menu: 'Menü',
-      close: 'Menüyü kapat',
-    },
+    nav: { home: 'Anasayfa', about: 'Hakkımda', projects: 'Projeler', contact: 'İletişim', menu: 'Menü', close: 'Menüyü kapat' },
     common: {
-      viewProject: 'Projeyi Gör',
-      backToProjects: 'Projelere Dön',
-      nextProject: 'Sonraki Proje',
-      previousProject: 'Önceki Proje',
-      downloadCV: 'Portfolyoyu İndir',
-      getInTouch: 'İletişime Geç',
-      scrollDown: 'Aşağı kaydır',
-      learnMore: 'Daha fazla',
-      languageLabel: 'Dil',
-      themeLabel: 'Tema',
-      switchTo: 'Şuna geç:',
+      viewProject: 'Projeyi Gör', backToProjects: 'Projelere Dön',
+      nextProject: 'Sonraki Proje', previousProject: 'Önceki Proje',
+      downloadCV: 'Portfolyoyu İndir', getInTouch: 'İletişime Geç',
+      scrollDown: 'Aşağı kaydır', learnMore: 'Daha fazla',
+      languageLabel: 'Dil', themeLabel: 'Tema', switchTo: 'Şuna geç:',
     },
     home: {
       eyebrow: 'Endüstriyel Tasarım Portfolyosu',
-      titleA: 'Portfolyo',
-      titleB: 'Endüstriyel Tasarım',
+      titleA: 'Portfolyo', titleB: 'Endüstriyel Tasarım',
       tagline: 'Form, işlev ve duygu arasında köprü kuran, sürdürülebilir ve insan odaklı ürünler tasarlıyorum.',
-      ctaPrimary: 'Projeleri Keşfet',
-      ctaSecondary: 'Hakkımda',
-      featuredEyebrow: 'Seçili Çalışmalar',
-      featuredTitle: 'Ürün içeriği',
-      aboutPreviewEyebrow: 'Hakkımda',
-      aboutPreviewCta: 'Devamını oku',
+      ctaPrimary: 'Projeleri Keşfet', ctaSecondary: 'Hakkımda',
+      featuredEyebrow: 'Seçili Çalışmalar', featuredTitle: 'Ürün içeriği',
+      aboutPreviewEyebrow: 'Hakkımda', aboutPreviewCta: 'Devamını oku',
     },
     about: {
-      eyebrow: 'Hakkımda',
-      title: 'Ülkü Defne Akın',
-      bio: 'İzmir Ekonomi Üniversitesi\'nde endüstriyel tasarım öğrencisiyim. Uzun vadeli projelere sabırlı ve disiplinli bir yaklaşımım var. Grup projelerinde iyi çalışırım ve liderlik özelliklerine sahibim. Konulara farklı perspektiflerden yaklaşabilirim. Hevesli ve öğrenmeye açığım, dolayısıyla iyi bir stajyer olabilirim.',
-      educationTitle: 'Eğitim',
-      experienceTitle: 'Deneyim',
-      digitalSkillsTitle: 'Dijital Yetenekler',
-      analogueSkillsTitle: 'Analog Yetenekler',
+      eyebrow: 'Hakkımda', title: 'Ülkü Defne Akın',
+      bio: "İzmir Ekonomi Üniversitesi'nde endüstriyel tasarım öğrencisiyim. Uzun vadeli projelere sabırlı ve disiplinli bir yaklaşımım var. Grup projelerinde iyi çalışırım ve liderlik özelliklerine sahibim. Konulara farklı perspektiflerden yaklaşabilirim. Hevesli ve öğrenmeye açığım, dolayısıyla iyi bir stajyer olabilirim.",
+      educationTitle: 'Eğitim', experienceTitle: 'Deneyim',
+      digitalSkillsTitle: 'Dijital Yetenekler', analogueSkillsTitle: 'Analog Yetenekler',
     },
     projects: {
-      eyebrow: 'Seçili Çalışmalar',
-      title: 'Projeler',
-      filterAll: 'Tümü',
-      filterIndividual: 'Bireysel',
-      filterGroup: 'Grup',
+      eyebrow: 'Seçili Çalışmalar', title: 'Projeler',
+      filterAll: 'Tümü', filterIndividual: 'Bireysel', filterGroup: 'Grup',
       typeIndividual: 'Bireysel Proje',
-      typeGroup2: '2 kişilik grup projesi',
-      typeGroup7: '7 kişilik grup projesi',
+      typeGroup2: '2 kişilik grup projesi', typeGroup7: '7 kişilik grup projesi',
     },
     contact: {
-      eyebrow: 'İletişime Geç',
-      title: 'Birlikte bir şey yaratalım',
+      eyebrow: 'İletişime Geç', title: 'Birlikte bir şey yaratalım',
       subtitle: 'Staj, iş birliği ve tasarım üzerine sohbet için açığım.',
-      nameLabel: 'Adınız',
-      emailLabel: 'E-posta adresiniz',
-      messageLabel: 'Mesajınız',
-      submit: 'Mesajı gönder',
-      sent: 'Mesaj gönderildi — teşekkürler.',
+      nameLabel: 'Adınız', emailLabel: 'E-posta adresiniz', messageLabel: 'Mesajınız',
+      submit: 'Mesajı gönder', sent: 'Mesaj gönderildi - teşekkürler.',
       directContact: 'Veya doğrudan ulaşın',
     },
     footer: {
@@ -159,81 +99,46 @@ export const ui = {
       copyright: '© 2026 Ülkü Defne Akın. Tüm hakları saklıdır.',
       backToTop: 'Yukarı çık',
     },
-    notFound: {
-      title: '404',
-      message: 'Bu sayfa kaybolmuş gibi görünüyor.',
-      back: 'Anasayfaya dön',
-    },
+    notFound: { title: '404', message: 'Bu sayfa kaybolmuş gibi görünüyor.', back: 'Anasayfaya dön' },
   },
 };
 
 export const education = [
-  {
-    institution: { en: 'Izmir University of Economics', tr: 'İzmir Ekonomi Üniversitesi' },
-    degree: { en: 'Bachelor of Fine Arts — Industrial Design', tr: 'Güzel Sanatlar Fakültesi — Endüstriyel Tasarım' },
-    years: '2021 – Present',
-    current: true,
-  },
-  {
-    institution: { en: 'EPFC, Brussels', tr: 'EPFC, Brüksel' },
-    degree: { en: 'English Course', tr: 'İngilizce Kursu' },
-    years: '2020 – 2021',
-  },
-  {
-    institution: { en: 'CAD, Brussels', tr: 'CAD, Brüksel' },
-    degree: { en: 'French Course', tr: 'Fransızca Kursu' },
-    years: '2020 – 2021',
-  },
-  {
-    institution: { en: 'Tuzkaya High School', tr: 'Tuzkaya Lisesi' },
-    degree: { en: 'High School', tr: 'Lise' },
-    years: '2019 – 2020',
-  },
-  {
-    institution: { en: 'Mehmet Zakir Ekni Anatolian High School', tr: 'Mehmet Zakir Ekni Anadolu Lisesi' },
-    degree: { en: 'High School', tr: 'Lise' },
-    years: '2016 – 2019',
-  },
-  {
-    institution: { en: 'TED Ankara College', tr: 'TED Ankara Koleji' },
-    degree: { en: 'Secondary School', tr: 'Ortaokul' },
-    years: '2012 – 2016',
-  },
+  { institution: { en: 'Izmir University of Economics', tr: 'İzmir Ekonomi Üniversitesi' },
+    degree: { en: 'Bachelor of Fine Arts - Industrial Design', tr: 'Güzel Sanatlar Fakültesi - Endüstriyel Tasarım' },
+    years: '2021 – Present', current: true },
+  { institution: { en: 'EPFC, Brussels', tr: 'EPFC, Brüksel' },
+    degree: { en: 'English Course', tr: 'İngilizce Kursu' }, years: '2020 – 2021' },
+  { institution: { en: 'CAD, Brussels', tr: 'CAD, Brüksel' },
+    degree: { en: 'French Course', tr: 'Fransızca Kursu' }, years: '2020 – 2021' },
+  { institution: { en: 'Tuzkaya High School', tr: 'Tuzkaya Lisesi' },
+    degree: { en: 'High School', tr: 'Lise' }, years: '2019 – 2020' },
+  { institution: { en: 'Mehmet Zakir Ekni Anatolian High School', tr: 'Mehmet Zakir Ekni Anadolu Lisesi' },
+    degree: { en: 'High School', tr: 'Lise' }, years: '2016 – 2019' },
+  { institution: { en: 'TED Ankara College', tr: 'TED Ankara Koleji' },
+    degree: { en: 'Secondary School', tr: 'Ortaokul' }, years: '2012 – 2016' },
 ];
 
 export const experience = [
-  {
-    company: 'Flatart Agency',
-    role: { en: 'Graphic Design, UI/UX', tr: 'Grafik Tasarım, UI/UX' },
-    years: '2025 – Present',
-  },
-  {
-    company: 'Proted — Prosthetics and Orthotics',
-    role: { en: 'R&D, CAD Modelling', tr: 'Ar-Ge, CAD Modelleme' },
-    years: '2024 – Present',
-  },
-  {
-    company: '312 Design',
-    role: { en: 'Furniture Design', tr: 'Mobilya Tasarımı' },
-    years: '2024 – Present',
-  },
+  { company: 'Flatart Agency', role: { en: 'Graphic Design, UI/UX', tr: 'Grafik Tasarım, UI/UX' }, years: '2025 – Present' },
+  { company: 'Proted - Prosthetics and Orthotics', role: { en: 'R&D, CAD Modelling', tr: 'Ar-Ge, CAD Modelleme' }, years: '2024 – Present' },
+  { company: '312 Design', role: { en: 'Furniture Design', tr: 'Mobilya Tasarımı' }, years: '2024 – Present' },
 ];
 
 export const skills = {
-  digital: [
-    'Fusion 360',
-    'Rhinoceros 3D',
-    'Blender',
-    'SolidWorks',
-    'Figma',
-    'Adobe Photoshop',
-    'Canva',
-  ],
+  digital: ['Fusion 360', 'Rhinoceros 3D', 'Blender', 'SolidWorks', 'Figma', 'Adobe Photoshop', 'Canva'],
   analogue: {
     en: ['Sketching', 'Rendering', 'Prototyping', 'Model Making', 'AI Tools & Visualisation', 'Concept Development', 'Ideation'],
     tr: ['Eskiz', 'Render', 'Prototipleme', 'Maket Yapımı', 'Yapay Zeka & Görselleştirme', 'Konsept Geliştirme', 'Fikir Üretimi'],
   },
 };
+
+// Three.js convention: Y = up. STL'ler farklı CAD orientation'unda olabilir.
+// modelRotation: [rx, ry, rz] radian - initial mesh rotation.
+// initialCamera: [x, y, z] - Canvas camera baslangic konumu.
+// Z-up CAD (Fusion, Solidworks varsayilan): X: -Math.PI/2
+// Y-up CAD (Blender Y-up): X: 0
+// X-up: Z: -Math.PI/2
 
 export const projects = [
   {
@@ -242,8 +147,12 @@ export const projects = [
     title: 'AquaPaws',
     type: 'individual',
     year: '2024',
-    cover: 'images/projects/aquapaws/cover.png',
+    cover: 'images/projects/aquapaws/cover.jpg',
+    coverPosition: 'bottom',
     model: 'models/aquapaws.stl',
+    modelRotation: [-Math.PI / 2, 0, 0],
+    initialCamera: [3, 2, 4],
+    disableColorPalette: true,
     tagline: {
       en: 'Atmospheric water for animals and people, outdoors.',
       tr: 'Hayvanlar ve insanlar için açık havada atmosferik su.',
@@ -254,48 +163,66 @@ export const projects = [
     },
     sections: [
       {
+        layout: 'diagram',
         title: { en: 'How the AWG System Works', tr: 'AWG Sistemi Nasıl Çalışır?' },
-        image: 'images/projects/aquapaws/intro.png',
-        steps: [
-          { en: 'Air from the atmosphere', tr: 'Atmosferden hava' },
-          { en: '3-layer air filter', tr: '3 katmanlı hava filtresi' },
-          { en: 'Condenser', tr: 'Yoğunlaştırıcı' },
-          { en: 'Water tank for storage', tr: 'Su depolama tankı' },
-          { en: 'Water filter', tr: 'Su filtresi' },
-          { en: 'Clean drinking water', tr: 'Temiz içme suyu' },
-        ],
-      },
-      {
-        title: { en: 'Interaction', tr: 'Etkileşim' },
-        image: 'images/projects/aquapaws/how-it-works.png',
+        image: 'images/projects/aquapaws/how-awg-works.png',
         body: {
-          en: 'The product radiates a frequency that only animals can detect. When the animal approaches, sensors detect it and water is dispensed. For humans, a foot pedal triggers water flow.',
-          tr: 'Ürün sadece hayvanların algılayabildiği bir frekans yayar. Hayvan yaklaştığında sensörler algılar ve su verilir. İnsanlar için bir ayak pedalı su akışını başlatır.',
+          en: 'The unit pulls humid air through a 3-layer filter, condenses it into clean drinkable water, then routes it through a sealed water tank to the dispensing points. Six stages: air intake, filtration, condensation, storage, post-filter, drinking water.',
+          tr: 'Cihaz nemli havayı 3 katmanlı filtreden çekip yoğunlaştırarak temiz içme suyuna dönüştürür, kapalı su tankı üzerinden dağıtım noktalarına yönlendirir. Altı aşama: hava alma, filtreleme, yoğuşma, depolama, son filtre, içme suyu.',
         },
       },
       {
-        title: { en: 'Components', tr: 'Bileşenler' },
-        images: [
-          'images/projects/aquapaws/sensor.png',
-          'images/projects/aquapaws/parts.png',
-          'images/projects/aquapaws/barrier.png',
+        layout: 'gallery',
+        title: { en: 'Product Views', tr: 'Ürün Görünümleri' },
+        slides: [
+          {
+            image: 'images/projects/aquapaws/q1.png',
+            callouts: [
+              { x: 48, y: 18, side: 'right', label: { en: 'Drinking water tap', tr: 'İçme suyu musluğu' } },
+              { x: 43, y: 89, side: 'right', label: { en: 'Foot pedal', tr: 'Ayak pedalı' } },
+            ],
+          },
+          {
+            image: 'images/projects/aquapaws/q2.png',
+          },
+          {
+            image: 'images/projects/aquapaws/q3.png',
+            callouts: [
+              { x: 45, y: 60, side: 'right', label: { en: 'Sensor that detects animals', tr: 'Hayvanları algılayan sensör' } },
+            ],
+          },
+          {
+            image: 'images/projects/aquapaws/q5.png',
+            callouts: [
+              { x: 82.5, y: 64.5, side: 'left', label: { en: 'Automatic water filling & draining point', tr: 'Otomatik su doldurma ve tahliye noktası' } },
+            ],
+          },
+          {
+            image: 'images/projects/aquapaws/q6.png',
+            callouts: [
+              { x: 50, y: 22, side: 'right', label: { en: 'Air intake & exhaust grilles', tr: 'Hava giriş/çıkış ızgaraları' } },
+              { x: 50, y: 75, side: 'right', label: { en: 'Barrier protecting clean water', tr: 'Temiz suyu koruyan bariyer' } },
+            ],
+          },
         ],
-        captions: {
-          en: [
-            'Automatic sensor that detects animals and initiates water distribution.',
-            'Foot pedal, water tap, water level indicator, drain & bottle slot.',
-            'Barrier that protects clean water from animal-waste contamination, with air intake/exhaust grilles.',
-          ],
-          tr: [
-            'Hayvanları algılayıp su dağıtımını başlatan otomatik sensör.',
-            'Ayak pedalı, su musluğu, su seviye göstergesi, tahliye ve şişe yuvası.',
-            'Temiz suyu hayvan atıklarından koruyan bariyer, hava giriş/çıkış ızgaralarıyla.',
-          ],
+      },
+      {
+        title: { en: 'Concept Sketches', tr: 'Konsept Çizimleri' },
+        image: 'images/projects/aquapaws/drawings.png',
+        body: {
+          en: 'Early sketches exploring form, ergonomics and the relationship between human use and animal interaction.',
+          tr: 'Form, ergonomi ve insan kullanımı ile hayvan etkileşimi arasındaki ilişkiyi araştıran ilk eskizler.',
         },
       },
       {
-        title: { en: 'Final Render', tr: 'Final Render' },
-        image: 'images/projects/aquapaws/final.png',
+        layout: 'split-reverse',
+        transparent: true,
+        title: { en: 'Exploded View', tr: 'Parçalı Görünüm' },
+        image: 'images/projects/aquapaws/exploded.png',
+        body: {
+          en: 'Internal components: sensor module, water tank, AWG condenser, foot pedal mechanism and bottle dispensing outlet.',
+          tr: 'İç bileşenler: sensör modülü, su tankı, AWG yoğunlaştırıcı, ayak pedalı mekanizması ve şişe doldurma çıkışı.',
+        },
       },
     ],
   },
@@ -305,41 +232,72 @@ export const projects = [
     title: 'SkyIron',
     type: 'individual',
     year: '2024',
-    cover: 'images/projects/skyiron/cover.png',
+    cover: 'images/projects/skyiron/cover.jpg',
+    descriptionIcon: 'images/projects/skyiron/fixed-iron.png',
     tagline: {
-      en: 'A vertical steam iron inspired by Yamaha motorcycle aesthetics.',
-      tr: 'Yamaha motosiklet estetiğinden ilham alan dikey buhar ütüsü.',
+      en: 'A handheld steamer with Yamaha-inspired sharp lines and dynamic form.',
+      tr: 'Yamaha esinli keskin çizgiler ve dinamik formuyla el tipi buhar makinesi.',
     },
     description: {
-      en: "In this project, I integrated the dynamic form and sharp line discipline embodied in Yamaha's iconic motorcycle designs into a vertical steam iron concept. My aim was to bring movement and a modern aesthetic to a static object, reflecting the elegant design language that symbolizes speed and performance in the motorcycle world.",
-      tr: "Bu projede Yamaha'nın ikonik motosiklet tasarımlarındaki dinamik form ve keskin çizgi disiplinini dikey bir buhar ütüsü konseptine entegre ettim. Amacım statik bir nesneye hareket ve modern bir estetik kazandırarak motosiklet dünyasında hız ve performansı simgeleyen zarif tasarım dilini yansıtmaktı.",
+      en: "In this project, I integrated the dynamic form and sharp line discipline embodied in Yamaha's iconic motorcycle designs into a handheld steam iron concept. My aim was to bring movement and a modern aesthetic to a static object - reflecting the elegant design language that symbolizes speed and performance in the motorcycle world.",
+      tr: "Bu projede Yamaha'nın ikonik motosiklet tasarımlarındaki dinamik form ve keskin çizgi disiplinini el tipi bir buhar ütüsü konseptine entegre ettim. Amacım statik bir nesneye hareket ve modern bir estetik kazandırarak motosiklet dünyasında hız ve performansı simgeleyen zarif tasarım dilini yansıtmaktı.",
     },
     sections: [
       {
-        title: { en: 'Inspiration', tr: 'İlham' },
-        image: 'images/projects/skyiron/inspiration.png',
-      },
-      {
-        title: { en: 'Form Study', tr: 'Form Çalışması' },
-        image: 'images/projects/skyiron/render-1.png',
-      },
-      {
-        title: { en: 'Components', tr: 'Bileşenler' },
-        image: 'images/projects/skyiron/parts.png',
-        captions: {
-          en: [
-            'Indicator light turns on when steam is ready.',
-            'Steam button, on/off button, water tank with opening clip and draw pipe.',
-          ],
-          tr: [
-            'Buhar hazır olduğunda gösterge ışığı yanar.',
-            'Buhar düğmesi, açma/kapama düğmesi, açma klipsli ve çekme borulu su tankı.',
-          ],
+        layout: 'callout',
+        title: { en: 'Ergonomic Pistol Grip', tr: 'Ergonomik Pistol Grip' },
+        image: 'images/projects/skyiron/grip-detail.png',
+        body: {
+          en: 'Hand controls within reach: the steam trigger sits where your index finger lands, with the power button and water tank release directly below.',
+          tr: 'Tüm kontroller parmak ucunda: buhar tetiği işaret parmağının doğal konumunda, hemen altında güç düğmesi ve su tankı çıkarma klipsi.',
         },
+        callouts: [
+          { x: 34, y: 32, side: 'right', label: { en: 'Steam button', tr: 'Buhar düğmesi' } },
+          { x: 34, y: 47.5, side: 'left', label: { en: 'On/off', tr: 'Açma/kapama' } },
+          { x: 34, y: 52.5, side: 'left', label: { en: 'Tank clip', tr: 'Tank klipsi' } },
+          { x: 25, y: 70, side: 'left', label: { en: 'Water draw pipe', tr: 'Su çekme borusu' } },
+          { x: 27, y: 83, side: 'right', label: { en: 'Water tank', tr: 'Su tankı' } },
+        ],
       },
       {
-        title: { en: 'Render', tr: 'Render' },
-        image: 'images/projects/skyiron/render-2.png',
+        layout: 'callout',
+        reverse: true,
+        title: { en: 'Steam-Ready Indicator', tr: 'Buhar Hazır Göstergesi' },
+        image: 'images/projects/skyiron/led-indicator.png',
+        body: {
+          en: 'A subtle red LED on the steam head turns on the moment the unit reaches working temperature - a minimal, single-point feedback that respects the clean silhouette.',
+          tr: 'Buhar başlığındaki ince kırmızı LED, ünite çalışma sıcaklığına ulaştığı anda yanar - temiz silueti bozmayan minimal, tek noktalı bir geri bildirim.',
+        },
+        callouts: [
+          { x: 41.5, y: 38.5, side: 'right', label: { en: 'LED indicator', tr: 'LED gösterge' } },
+          { x: 80, y: 10, side: 'right', label: { en: 'Steam outlet', tr: 'Buhar çıkışı' } },
+        ],
+      },
+      {
+        layout: 'callout',
+        title: { en: 'Internal Architecture', tr: 'İç Yapı' },
+        image: 'images/projects/skyiron/cutaway-schema.png',
+        body: {
+          en: 'A cutaway view shows how steam is generated and routed - resistance heater, miniature water pump, steam channel and the chambers that keep them isolated.',
+          tr: 'Kesit görünümü, buharın nasıl üretildiğini ve yönlendirildiğini gösterir - direnç ısıtıcı, mini su pompası, buhar kanalı ve bunları izole eden hazneler.',
+        },
+        callouts: [
+          { x: 13, y: 12, side: 'left', label: { en: 'Resistance', tr: 'Direnç' } },
+          { x: 76, y: 20, side: 'right', label: { en: 'LED indicator', tr: 'LED gösterge' } },
+          { x: 88, y: 26, side: 'right', label: { en: 'Power line', tr: 'Güç hattı' } },
+          { x: 55, y: 38, side: 'left', label: { en: 'Steam button', tr: 'Buhar düğmesi' } },
+          { x: 60, y: 58, side: 'left', label: { en: 'Water pump', tr: 'Su pompası' } },
+          { x: 62, y: 78, side: 'left', label: { en: 'Water tank', tr: 'Su tankı' } },
+        ],
+      },
+      {
+        layout: 'in-action',
+        title: { en: 'In Action', tr: 'Çalışırken' },
+        image: 'images/projects/skyiron/full-render.png',
+        body: {
+          en: 'Held like a hairdryer - light, quick to point, ready to release a controlled jet of steam.',
+          tr: 'Saç kurutma makinesi gibi tutulur - hafif, hızlı yönlendirilebilir, kontrollü buhar jeti vermeye hazır.',
+        },
       },
     ],
   },
@@ -349,7 +307,10 @@ export const projects = [
     title: 'AirStride',
     type: 'group2',
     year: '2024',
-    cover: 'images/projects/airstride/cover.png',
+    cover: 'images/projects/airstride/cover.jpg',
+    model: 'models/airstride.stl',
+    modelRotation: [-Math.PI / 2, 0, 0], // Z-up CAD
+    initialCamera: [3, 2, 4],
     tagline: {
       en: 'A sculptural air-cleaning system for shared spaces.',
       tr: 'Ortak alanlar için heykelsi bir hava temizleme sistemi.',
@@ -360,35 +321,31 @@ export const projects = [
     },
     sections: [
       {
-        title: { en: 'Concept', tr: 'Konsept' },
-        image: 'images/projects/airstride/intro.png',
-      },
-      {
-        title: { en: 'Two Functions', tr: 'İki Fonksiyon' },
-        image: 'images/projects/airstride/parts.png',
+        title: { en: 'The Product', tr: 'Ürün' },
+        image: 'images/projects/airstride/product.jpg',
         body: {
-          en: 'The unit combines a vacuuming part and a blowing part — together they create a controlled air current that captures dust and circulates clean air.',
-          tr: 'Ünite bir emme parçası ve bir üfleme parçasını birleştirir — birlikte tozu yakalayan ve temiz havayı dolaştıran kontrollü bir hava akımı oluştururlar.',
+          en: 'A leaf-inspired sculptural body that combines a vacuuming part and a blowing part - together they create a controlled air current.',
+          tr: 'Yaprak esinli heykelsi gövde, emme ve üfleme parçalarını birleştirir - birlikte kontrollü bir hava akımı oluştururlar.',
         },
       },
       {
-        title: { en: 'Concept Analysis', tr: 'Konsept Analizi' },
-        image: 'images/projects/airstride/scheme.png',
-        body: {
-          en: 'A full product scheme mapping working modes, control flow, purchasing experience, modules, textures, colours and form references.',
-          tr: 'Çalışma modları, kontrol akışı, satın alma deneyimi, modüller, dokular, renkler ve form referanslarını haritalayan tam bir ürün şeması.',
-        },
+        title: { en: 'Exploded View', tr: 'Patlamış Görünüm' },
+        image: 'images/projects/airstride/exploded.jpg',
       },
       {
-        title: { en: 'Internal Structure', tr: 'İç Yapı' },
-        image: 'images/projects/airstride/internal.png',
+        title: { en: 'Concept Scheme', tr: 'Konsept Şeması' },
+        image: 'images/projects/airstride/scheme.jpg',
+        body: {
+          en: 'Full product scheme: working modes, control flow, modules, textures and form references.',
+          tr: 'Tam ürün şeması: çalışma modları, kontrol akışı, modüller, dokular ve form referansları.',
+        },
       },
       {
         title: { en: 'Companion Dashboard', tr: 'Yardımcı Panel' },
-        image: 'images/projects/airstride/dashboard.png',
+        image: 'images/projects/airstride/dashboard-clean.jpg',
         body: {
-          en: 'Users monitor filter status, dust bin level, fan speed, human-interaction insights, location and energy use, plus real-time air-quality data (PM2.5, humidity, temperature, airflow).',
-          tr: 'Kullanıcılar filtre durumunu, toz haznesi seviyesini, fan hızını, insan etkileşimi içgörülerini, konum ve enerji kullanımını ve gerçek zamanlı hava kalitesi verilerini (PM2.5, nem, sıcaklık, hava akışı) izler.',
+          en: 'Real-time monitoring: PM2.5, airflow, humidity, temperature, fan speed, filter status, dustbin level, location and energy use.',
+          tr: 'Gerçek zamanlı izleme: PM2.5, hava akışı, nem, sıcaklık, fan hızı, filtre durumu, toz haznesi seviyesi, konum ve enerji kullanımı.',
         },
       },
     ],
@@ -399,7 +356,10 @@ export const projects = [
     title: 'Zobox',
     type: 'individual',
     year: '2025',
-    cover: 'images/projects/zobox/cover.png',
+    cover: 'images/projects/zobox/cover.jpg',
+    model: 'models/zobox.stl',
+    modelRotation: [0, 0, 0], // basket - longest X, gosterim icin dik dursun istersek Z: -Math.PI/2
+    initialCamera: [4, 3, 5],
     tagline: {
       en: 'A fully autonomous 4-channel self-checkout and packaging station.',
       tr: 'Tamamen otonom, 4 kanallı self-checkout ve paketleme istasyonu.',
@@ -410,16 +370,43 @@ export const projects = [
     },
     sections: [
       {
-        title: { en: 'In Context', tr: 'Bağlam İçinde' },
-        image: 'images/projects/zobox/intro.png',
+        title: { en: 'Main Unit', tr: 'Ana Ünite' },
+        images: [
+          'images/projects/zobox/main-unit-1.jpg',
+          'images/projects/zobox/main-unit-2.jpg',
+          'images/projects/zobox/main-unit-3.jpg',
+        ],
       },
       {
-        title: { en: 'Renders', tr: 'Renderlar' },
+        title: { en: 'Different Angles', tr: 'Farklı Açılar' },
         images: [
-          'images/projects/zobox/render-1.png',
-          'images/projects/zobox/render-2.png',
-          'images/projects/zobox/render-3.png',
+          'images/projects/zobox/main-unit-4.jpg',
+          'images/projects/zobox/main-unit-5.jpg',
         ],
+      },
+      {
+        title: { en: 'Smart Basket', tr: 'Akıllı Sepet' },
+        images: [
+          'images/projects/zobox/basket-1.jpg',
+          'images/projects/zobox/basket-2.jpg',
+          'images/projects/zobox/basket-3.jpg',
+        ],
+        body: {
+          en: 'A companion mobile basket that pairs with the checkout station and travels with the customer.',
+          tr: 'Checkout istasyonu ile eşleşen ve müşteriyle birlikte hareket eden taşınabilir bir sepet.',
+        },
+      },
+      {
+        title: { en: 'Dashboard', tr: 'Pano' },
+        image: 'images/projects/zobox/app-dashboard.jpg',
+        body: {
+          en: 'Welcome flow, product categorization, detected items list, QR-based scan-to-pay and total.',
+          tr: 'Karşılama akışı, ürün kategorizasyonu, algılanan ürün listesi, QR ile öde ve toplam tutar.',
+        },
+      },
+      {
+        title: { en: 'Concept Sketches', tr: 'Konsept Eskizleri' },
+        image: 'images/projects/zobox/sketches.jpg',
       },
     ],
   },
@@ -429,31 +416,38 @@ export const projects = [
     title: 'Zest',
     type: 'group7',
     year: '2025',
-    cover: 'images/projects/zest/cover.png',
+    cover: 'images/projects/zest/cover.jpg',
+    model: 'models/zest.stl',
+    modelRotation: [0, 0, 0], // Y-up zaten (longest Y)
+    initialCamera: [4, 2.5, 5],
     tagline: {
       en: 'A marine delivery ecosystem for coastal areas and yachts.',
       tr: 'Kıyı alanları ve yatlar için bir deniz teslimat ekosistemi.',
     },
     description: {
-      en: 'Delivering food, beverages, essential supplies, and restaurant services to marinas, coastal areas, yachts, and onshore pickup points is a time-consuming and logistically challenging process. These operations require a high level of coordination and intensive human labor. The inadequacies and limited accessibility of the current service result in inefficiencies in terms of energy, comfort, and time. We aim to design a marine-based delivery experience for people living near the sea or spending time in coastal areas. The system centers around a mobile main station that moves between bays and coastal points, while autonomous and manually operated hybrid marine vehicles transport goods. Using GPS, IoT, and real-time tracking, it forms a smart and connected delivery network that adapts to seasonal demand.',
-      tr: 'Marinalara, kıyı alanlarına, yatlara ve kıyıdaki teslim alma noktalarına yiyecek, içecek, temel malzeme ve restoran hizmetleri ulaştırmak zaman alıcı ve lojistik olarak zorlu bir süreçtir. Bu operasyonlar yüksek düzeyde koordinasyon ve yoğun insan emeği gerektirir. Mevcut hizmetin yetersizlikleri ve sınırlı erişilebilirliği enerji, konfor ve zaman açısından verimsizliklere yol açmaktadır. Denize yakın yaşayan veya kıyı alanlarında zaman geçiren insanlar için deniz tabanlı bir teslimat deneyimi tasarlamayı amaçlıyoruz. Sistem koylar ve kıyı noktaları arasında hareket eden mobil bir ana istasyon etrafında yapılandırılır; otonom ve manuel kullanılan hibrit deniz araçları malları taşır. GPS, IoT ve gerçek zamanlı takip kullanılarak mevsimsel talebe uyum sağlayan akıllı ve bağlantılı bir teslimat ağı oluşturur.',
+      en: 'Delivering food, beverages, essential supplies, and restaurant services to marinas, coastal areas, yachts, and onshore pickup points is a time-consuming and logistically challenging process. We aim to design a marine-based delivery experience for people living near the sea or spending time in coastal areas. The system centers around a mobile main station that moves between bays and coastal points, while autonomous and manually operated hybrid marine vehicles transport goods. Using GPS, IoT, and real-time tracking, it forms a smart and connected delivery network that adapts to seasonal demand.',
+      tr: 'Marinalara, kıyı alanlarına, yatlara ve kıyıdaki teslim alma noktalarına yiyecek, içecek, temel malzeme ve restoran hizmetleri ulaştırmak zaman alıcı ve lojistik olarak zorlu bir süreçtir. Denize yakın yaşayan veya kıyı alanlarında zaman geçiren insanlar için deniz tabanlı bir teslimat deneyimi tasarlamayı amaçlıyoruz. Sistem koylar ve kıyı noktaları arasında hareket eden mobil bir ana istasyon etrafında yapılandırılır; otonom ve manuel kullanılan hibrit deniz araçları malları taşır. GPS, IoT ve gerçek zamanlı takip kullanılarak mevsimsel talebe uyum sağlayan akıllı ve bağlantılı bir teslimat ağı oluşturur.',
     },
     sections: [
       {
-        title: { en: 'Concept Render', tr: 'Konsept Render' },
-        image: 'images/projects/zest/render-1.png',
-      },
-      {
-        title: { en: 'User Scenario', tr: 'Kullanıcı Senaryosu' },
-        image: 'images/projects/zest/scenario.png',
+        title: { en: 'In Context', tr: 'Bağlam İçinde' },
+        image: 'images/projects/zest/yacht-angle.jpg',
       },
       {
         title: { en: 'Approach', tr: 'Yaklaşım' },
-        image: 'images/projects/zest/intro.png',
+        image: 'images/projects/zest/description.jpg',
       },
       {
-        title: { en: 'In the Bay', tr: 'Koyda' },
-        image: 'images/projects/zest/render-2.png',
+        title: { en: 'Front View', tr: 'Önden Görünüm' },
+        image: 'images/projects/zest/front.jpg',
+      },
+      {
+        title: { en: 'User Scenario', tr: 'Kullanıcı Senaryosu' },
+        image: 'images/projects/zest/scenario.jpg',
+      },
+      {
+        title: { en: 'Companion App', tr: 'Yardımcı Uygulama' },
+        image: 'images/projects/zest/app.jpg',
       },
     ],
   },
@@ -463,7 +457,10 @@ export const projects = [
     title: 'Indep',
     type: 'individual',
     year: '2025',
-    cover: 'images/projects/indep/cover.png',
+    cover: 'images/projects/indep/cover.jpg',
+    model: 'models/indep.stl',
+    modelRotation: [0, 0, 0], // Y-up zaten (longest Y)
+    initialCamera: [3, 2.5, 4],
     tagline: {
       en: 'An experience-oriented outdoor heating unit.',
       tr: 'Deneyim odaklı, dış mekan ısıtma ünitesi.',
@@ -474,26 +471,29 @@ export const projects = [
     },
     sections: [
       {
-        title: { en: 'In Context', tr: 'Bağlam İçinde' },
-        image: 'images/projects/indep/intro.png',
-      },
-      {
-        title: { en: 'Features', tr: 'Özellikler' },
-        image: 'images/projects/indep/render-1.png',
+        title: { en: 'Top View', tr: 'Üstten Görünüm' },
+        image: 'images/projects/indep/top-view.jpg',
         body: {
-          en: '360-degree rotating mechanism and integrated LED lighting create a warm gathering space.',
-          tr: '360 derece dönen mekanizma ve entegre LED aydınlatma sıcak bir buluşma alanı yaratır.',
+          en: '360° rotating mechanism, integrated LED lighting and greenery on the roof structure.',
+          tr: '360° döner mekanizma, entegre LED aydınlatma ve çatı yapısında yeşillik.',
         },
       },
       {
-        title: { en: 'Render', tr: 'Render' },
-        image: 'images/projects/indep/render-2.png',
+        title: { en: 'Side View', tr: 'Yandan Görünüm' },
+        image: 'images/projects/indep/side.jpg',
+      },
+      {
+        title: { en: 'Three-Quarter', tr: 'Üç Çeyrek Görünüm' },
+        image: 'images/projects/indep/angle.jpg',
+      },
+      {
+        title: { en: 'Flame Detail', tr: 'Alev Detayı' },
+        image: 'images/projects/indep/flame-detail.jpg',
       },
     ],
   },
 ];
 
-// Sayfa içerik gruplaması
 export const projectTypes = {
   individual: { en: 'Individual Project', tr: 'Bireysel Proje' },
   group2: { en: '2-person group project', tr: '2 kişilik grup projesi' },

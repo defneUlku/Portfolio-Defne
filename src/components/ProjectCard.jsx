@@ -17,7 +17,7 @@ export default function ProjectCard({ project, index = 0, featured = false }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
     >
-      <Link to={`/projects/${project.slug}`} className="project-card-link" aria-label={`${project.title} — ${t.common.viewProject}`}>
+      <Link to={`/projects/${project.slug}`} className="project-card-link" aria-label={`${project.title} - ${t.common.viewProject}`}>
         <div className="project-card-media">
           <img src={project.cover} alt="" loading="lazy" />
           <span className="project-hover-cta">

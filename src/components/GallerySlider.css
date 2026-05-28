@@ -1,0 +1,282 @@
+.gallery-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ============ TOOLBAR (zoom controls) - üst orta, hover'da görünür ============ */
+.gallery-toolbar {
+  position: absolute;
+  top: var(--space-3);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(242, 238, 231, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(20, 16, 14, 0.1);
+  z-index: 6;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms var(--ease), transform 250ms var(--ease);
+}
+
+.gallery-stage.is-hovered .gallery-toolbar {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.gallery-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+}
+
+.gallery-tool-btn:hover:not(:disabled),
+.gallery-tool-btn:focus-visible:not(:disabled) {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.gallery-tool-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.gallery-tool-value {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  min-width: 44px;
+  text-align: center;
+}
+
+/* ============ STAGE: 16:9 ana resim ============ */
+.gallery-stage {
+  position: relative;
+  width: 100%;
+  background: #ffffff; /* dikey görsellerin yanları beyaz fill */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  isolation: isolate;
+  border: 1px solid var(--color-border);
+}
+
+.gallery-media {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* aspect korunur, kenarlar beyaz fill */
+  transition: transform 350ms var(--ease);
+  will-change: transform;
+}
+
+/* ============ NAVIGATION ============ */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(242, 238, 231, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text);
+  z-index: 5;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+}
+
+.gallery-nav:hover,
+.gallery-nav:focus-visible {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent);
+}
+
+.gallery-nav-prev { left: var(--space-3); }
+.gallery-nav-next { right: var(--space-3); }
+
+.gallery-counter {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  background: rgba(242, 238, 231, 0.85);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  z-index: 5;
+}
+
+/* ============ CALLOUTS (hover'da görünür, zoom yok) ============ */
+.gallery-callout {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 400ms var(--ease);
+}
+
+.gallery-stage.is-hovered .gallery-callout {
+  opacity: 1;
+}
+
+.gc-ring {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  animation: galleryRingPulse 2.2s ease-in-out infinite;
+}
+
+.gc-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 0 0 4px rgba(242, 238, 231, 0.95),
+    0 4px 12px rgba(92, 26, 27, 0.4);
+}
+
+@keyframes galleryRingPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.gc-line {
+  position: absolute;
+  height: 1.5px;
+  background: linear-gradient(to right,
+    var(--color-accent) 0%,
+    var(--color-accent) 65%,
+    rgba(92, 26, 27, 0.3) 100%);
+  top: 0;
+  width: 60px;
+  transform-origin: left center;
+}
+
+.gallery-callout-right .gc-line { left: 6px; }
+.gallery-callout-left .gc-line {
+  right: 6px;
+  background: linear-gradient(to left,
+    var(--color-accent) 0%,
+    var(--color-accent) 65%,
+    rgba(92, 26, 27, 0.3) 100%);
+}
+
+.gc-label {
+  position: absolute;
+  top: -8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.7rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(20, 16, 14, 0.1);
+  white-space: nowrap;
+  border-left: 2px solid var(--color-accent);
+}
+
+.gallery-callout-right .gc-label { left: 66px; }
+.gallery-callout-left .gc-label {
+  right: 66px;
+  border-left: none;
+  border-right: 2px solid var(--color-accent);
+}
+
+/* ============ THUMBNAILS ============ */
+.gallery-thumbs {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-thumb {
+  width: 96px;
+  aspect-ratio: 16 / 9;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--duration) var(--ease);
+  flex-shrink: 0;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--duration) var(--ease);
+  opacity: 0.6;
+}
+
+.gallery-thumb:hover img,
+.gallery-thumb:focus-visible img {
+  opacity: 0.85;
+}
+
+.gallery-thumb.is-active {
+  border-color: var(--color-accent);
+}
+
+.gallery-thumb.is-active img {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .gallery-thumb { width: 72px; aspect-ratio: 16 / 9; }
+  .gallery-nav { width: 36px; height: 36px; }
+  .gc-label { font-size: 0.6rem; padding: 0.2rem 0.4rem; }
+  .gc-line { width: 36px; }
+  .gallery-callout-right .gc-label { left: 42px; }
+  .gallery-callout-left .gc-label { right: 42px; }
+}

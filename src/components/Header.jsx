@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container header-inner">
-        <Link to="/" className="logo" aria-label="Defne Akın — Home">
+        <Link to="/" className="logo" aria-label="Defne Akın - Home">
           <span className="logo-mark" aria-hidden="true">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
               <rect x="3" y="3" width="26" height="26" stroke="currentColor" strokeWidth="2.5" />

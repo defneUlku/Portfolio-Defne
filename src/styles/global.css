@@ -1,5 +1,5 @@
 /* ============================================
-   DESIGN TOKENS — PDF'ten esinlenen tasarım dili
+   DESIGN TOKENS - PDF'ten esinlenen tasarım dili
    "Black and Beige Minimalist Line"
    ============================================ */
 
@@ -8,8 +8,8 @@
   --color-bg: #E8E3DC;           /* açık taş/bej arka plan */
   --color-bg-alt: #F2EEE7;       /* daha açık bej (kartlar) */
   --color-bg-dark: #1A1614;      /* koyu siyah/kahve */
-  --color-accent: #5C1A1B;       /* koyu bordo — vurgu */
-  --color-accent-light: #8B3A3B; /* açık bordo — hover */
+  --color-accent: #5C1A1B;       /* koyu bordo - vurgu */
+  --color-accent-light: #8B3A3B; /* açık bordo - hover */
   --color-text: #1A1614;         /* gövde metin */
   --color-text-muted: #6B5F58;   /* yumuşak metin */
   --color-text-inverse: #F2EEE7; /* koyu zeminde */

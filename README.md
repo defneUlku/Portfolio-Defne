@@ -1,14 +1,14 @@
-# Ülkü Defne Akın — Industrial Design Portfolio
+# Ülkü Defne Akın - Industrial Design Portfolio
 
 A bilingual (EN/TR), accessible portfolio website for industrial designer Ülkü Defne Akın, built with React + Vite. Design language is faithful to the PDF portfolio: "Black and Beige Minimalist Line".
 
 ## Tech stack
 
 - **React 18** + **Vite 5**
-- **React Router 6** — multi-page routing
-- **Framer Motion** — page transitions and scroll-triggered animations
-- **Lucide React** — icons
-- **CSS Modules + design tokens** — no UI framework, full design control
+- **React Router 6** - multi-page routing
+- **Framer Motion** - page transitions and scroll-triggered animations
+- **Lucide React** - icons
+- **CSS Modules + design tokens** - no UI framework, full design control
 
 ## Features
 
@@ -19,7 +19,7 @@ A bilingual (EN/TR), accessible portfolio website for industrial designer Ülkü
 - Sticky header with mobile drawer menu
 - Contact form (mailto-based)
 - Full keyboard navigation, skip link, focus rings, semantic HTML, `prefers-reduced-motion` support
-- Responsive — mobile-first, breakpoints at 640/768/900/1024px
+- Responsive - mobile-first, breakpoints at 640/768/900/1024px
 
 ## Getting started
 

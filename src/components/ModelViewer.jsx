@@ -21,7 +21,7 @@ function Loader() {
 }
 
 // ---------- STL modelini yükle ve göster ----------
-function STLModel({ url, color = '#9C8B7A', autoRotate, modelRef }) {
+function STLModel({ url, color = '#9C8B7A', autoRotate, modelRef, rotation = [-Math.PI / 2, 0, 0] }) {
   const geometry = useLoader(STLLoader, url);
   const meshRef = useRef();
 
@@ -30,27 +30,28 @@ function STLModel({ url, color = '#9C8B7A', autoRotate, modelRef }) {
     if (modelRef) modelRef.current = meshRef.current;
   });
 
-  // Geometriyi normalize et (CAD Z-up'tan Three.js Y-up'a çevir, merkeze al, ölçekle)
+  // Geometriyi normalize et: her projeye özgü rotasyonu uygula, merkeze al, ölçekle
   const processedGeometry = useMemo(() => {
     const g = geometry.clone();
-    // CAD yazılımları (Fusion 360, Solidworks vb.) Z-up koordinat sistemi kullanır.
-    // Three.js Y-up kullanıyor — modeli dik tutmak için X ekseni etrafında -90 derece döndür
-    const rotationMatrix = new THREE.Matrix4().makeRotationX(-Math.PI / 2);
-    g.applyMatrix4(rotationMatrix);
+    // Her STL farklı CAD orientation'unda olabilir (Z-up, Y-up, X-up).
+    // rotation prop'u ile per-project Euler açıları uygulayalım.
+    const euler = new THREE.Euler(rotation[0], rotation[1], rotation[2], 'XYZ');
+    const rotMat = new THREE.Matrix4().makeRotationFromEuler(euler);
+    g.applyMatrix4(rotMat);
 
     g.computeVertexNormals();
     g.computeBoundingBox();
     g.center();
 
-    // Modeli makul boyuta ölçekle
+    // Modeli makul boyuta ölçekle (sahne içinde ~2.4 birim)
     const bbox = g.boundingBox;
     const size = new THREE.Vector3();
     bbox.getSize(size);
     const maxDim = Math.max(size.x, size.y, size.z);
-    const scale = 2.4 / maxDim; // Sahne içinde ~2.4 birim boyut (biraz daha büyük)
+    const scale = 2.4 / maxDim;
     g.scale(scale, scale, scale);
     return g;
-  }, [geometry]);
+  }, [geometry, rotation]);
 
   useFrame((_, delta) => {
     if (autoRotate && meshRef.current) {
@@ -71,7 +72,7 @@ function STLModel({ url, color = '#9C8B7A', autoRotate, modelRef }) {
 }
 
 // ---------- Ana bileşen ----------
-export default function ModelViewer({ url, title, defaultColor = '#9C8B7A' }) {
+export default function ModelViewer({ url, title, defaultColor = '#9C8B7A', modelRotation = [-Math.PI / 2, 0, 0], initialCamera = [3, 2, 4], disableColorPalette = false }) {
   const { lang } = useLang();
   const [autoRotate, setAutoRotate] = useState(true);
   const [fullscreen, setFullscreen] = useState(false);
@@ -142,7 +143,7 @@ export default function ModelViewer({ url, title, defaultColor = '#9C8B7A' }) {
       aria-label={title ? `Interactive 3D model of ${title}` : 'Interactive 3D model'}
     >
       <Canvas
-        camera={{ position: [3, 2, 4], fov: 45 }}
+        camera={{ position: initialCamera, fov: 45 }}
         shadows
         dpr={[1, 2]}
         gl={{ antialias: true, preserveDrawingBuffer: true }}
@@ -166,6 +167,7 @@ export default function ModelViewer({ url, title, defaultColor = '#9C8B7A' }) {
               color={color}
               autoRotate={autoRotate}
               modelRef={modelRef}
+              rotation={modelRotation}
             />
           </Center>
           <Environment preset="studio" background={false} />
@@ -229,6 +231,7 @@ export default function ModelViewer({ url, title, defaultColor = '#9C8B7A' }) {
       </div>
 
       {/* Malzeme paleti */}
+      {!disableColorPalette && (
       <div className="model-palette" role="radiogroup" aria-label={labels.material}>
         <span className="model-palette-label">{labels.material}</span>
         {palette.map((p) => (
@@ -245,6 +248,7 @@ export default function ModelViewer({ url, title, defaultColor = '#9C8B7A' }) {
           />
         ))}
       </div>
+      )}
     </div>
   );
 }
