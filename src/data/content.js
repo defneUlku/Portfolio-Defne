@@ -307,10 +307,11 @@ export const projects = [
     title: 'AirStride',
     type: 'group2',
     year: '2024',
-    cover: 'images/projects/airstride/cover.jpg',
+    cover: 'images/projects/airstride/cover.png',
     model: 'models/airstride.stl',
     modelRotation: [-Math.PI / 2, 0, 0], // Z-up CAD
     initialCamera: [3, 2, 4],
+    disableColorPalette: true,
     tagline: {
       en: 'A sculptural air-cleaning system for shared spaces.',
       tr: 'Ortak alanlar için heykelsi bir hava temizleme sistemi.',
@@ -322,31 +323,97 @@ export const projects = [
     sections: [
       {
         title: { en: 'The Product', tr: 'Ürün' },
-        image: 'images/projects/airstride/product.jpg',
+        image: 'images/projects/airstride/theproduct.png',
         body: {
           en: 'A leaf-inspired sculptural body that combines a vacuuming part and a blowing part - together they create a controlled air current.',
           tr: 'Yaprak esinli heykelsi gövde, emme ve üfleme parçalarını birleştirir - birlikte kontrollü bir hava akımı oluştururlar.',
         },
       },
       {
-        title: { en: 'Exploded View', tr: 'Patlamış Görünüm' },
-        image: 'images/projects/airstride/exploded.jpg',
+        title: { en: 'Dashboard View', tr: 'Pano Görünümü' },
+        layout: 'callout',
+        wide: true,
+        noLabelFrame: true,
+        image: 'images/projects/airstride/dashboard-view.png',
+        body: {
+          en: 'A companion dashboard that gives the operator a clear, glanceable view of how the device is performing - environment, energy use, people interaction and maintenance, all in one place.',
+          tr: 'Operatöre cihazın nasıl çalıştığını tek bakışta gösteren bir pano - ortam, enerji kullanımı, insan etkileşimi ve bakım, hepsi tek ekranda.',
+        },
+        callouts: [
+          {
+            x: 20, y: 37, side: 'left',
+            lineLength: 200, labelWidth: 200,
+            label: {
+              en: "This section provides a summary of the device's current location and energy consumption. Users can easily monitor where the device is and how much energy it is using.",
+              tr: "Bu bölüm cihazın anlık konumunu ve enerji tüketimini özetler. Kullanıcılar cihazın nerede olduğunu ve ne kadar enerji harcadığını kolayca takip edebilir.",
+            },
+          },
+          {
+            x: 60, y: 24, side: 'right',
+            lineLength: 380, labelWidth: 220,
+            label: {
+              en: 'This section monitors critical environmental parameters in real-time, including air flow, temperature, humidity, and PM2.5 particle levels. Users can easily track these metrics to assess air quality and comfort conditions.',
+              tr: 'Bu bölüm hava akışı, sıcaklık, nem ve PM2.5 partikül seviyeleri gibi kritik çevresel parametreleri gerçek zamanlı olarak izler. Kullanıcılar hava kalitesini ve konfor koşullarını bu metrikler üzerinden kolayca değerlendirebilir.',
+            },
+          },
+          {
+            x: 65, y: 49, side: 'right',
+            lineLength: 340, labelWidth: 220,
+            label: {
+              en: "The user can manually control the fan system's operating speed or enable automatic mode, allowing the system to dynamically adjust the fan power based on environmental conditions.",
+              tr: 'Kullanıcı fan sisteminin çalışma hızını manuel olarak ayarlayabilir veya otomatik moda alabilir; bu modda sistem fan gücünü ortam koşullarına göre dinamik olarak ayarlar.',
+            },
+          },
+          {
+            x: 20, y: 68, side: 'left',
+            lineLength: 200, labelWidth: 200,
+            label: {
+              en: 'The user can access detailed insights on human interaction, including peak activity hours, total number of passersby, and the average interval between each person detected.',
+              tr: 'Kullanıcı insan etkileşimine dair detaylı verilere ulaşabilir; yoğun aktivite saatleri, toplam geçen kişi sayısı ve algılanan kişiler arasındaki ortalama süre dahil.',
+            },
+          },
+          {
+            x: 60, y: 80, side: 'right',
+            lineLength: 380, labelWidth: 220,
+            label: {
+              en: "The user can monitor the filter maintenance status and dust bin fill level through the dashboard, allowing timely actions to be taken based on the system's condition.",
+              tr: 'Kullanıcı filtre bakım durumunu ve toz haznesi doluluk seviyesini pano üzerinden takip ederek sistem durumuna göre zamanında müdahale edebilir.',
+            },
+          },
+        ],
       },
       {
         title: { en: 'Concept Scheme', tr: 'Konsept Şeması' },
-        image: 'images/projects/airstride/scheme.jpg',
+        layout: 'callout',
+        wide: true,
+        image: 'images/projects/airstride/concept-scheme.png',
         body: {
-          en: 'Full product scheme: working modes, control flow, modules, textures and form references.',
-          tr: 'Tam ürün şeması: çalışma modları, kontrol akışı, modüller, dokular ve form referansları.',
+          en: 'Full product scheme: every internal module - from air intake and motor to filter, vacuuming chamber and dust bin - laid out for reference.',
+          tr: 'Tam ürün şeması: hava giriş ızgarasından motora, filtreden emiş bölmesine ve toz haznesine kadar tüm iç modüller referans için görsel olarak gösterilir.',
         },
-      },
-      {
-        title: { en: 'Companion Dashboard', tr: 'Yardımcı Panel' },
-        image: 'images/projects/airstride/dashboard-clean.jpg',
-        body: {
-          en: 'Real-time monitoring: PM2.5, airflow, humidity, temperature, fan speed, filter status, dustbin level, location and energy use.',
-          tr: 'Gerçek zamanlı izleme: PM2.5, hava akışı, nem, sıcaklık, fan hızı, filtre durumu, toz haznesi seviyesi, konum ve enerji kullanımı.',
-        },
+        callouts: [
+          // Sol patlamış görünüm (büyük)
+          { x: 18, y: 5,  side: 'left',  label: { en: 'Air intake grille', tr: 'Hava giriş ızgarası' } },
+          { x: 33, y: 6,  side: 'right', label: { en: 'Top cover',         tr: 'Üst kapak' } },
+          { x: 23, y: 13, side: 'left',  label: { en: 'Motor',             tr: 'Motor' } },
+          { x: 23, y: 17, side: 'left',  label: { en: 'Fan',               tr: 'Fan' } },
+          { x: 31, y: 14, side: 'right', label: { en: 'Lid',               tr: 'Kapak' } },
+          { x: 31, y: 17, side: 'right', label: { en: 'Support wall',      tr: 'Destek duvarı' } },
+          { x: 31, y: 22, side: 'right', label: { en: 'Body cover',        tr: 'Gövde kapağı' } },
+          { x: 28, y: 31, side: 'right', label: { en: 'Filter',            tr: 'Filtre' } },
+          { x: 16, y: 37, side: 'left',  label: { en: 'Pipe',              tr: 'Boru' } },
+          { x: 14, y: 44, side: 'left',  label: { en: 'Vacuuming part',    tr: 'Emiş parçası' } },
+          { x: 25, y: 57, side: 'left',  label: { en: 'Trunk',             tr: 'Gövde' } },
+          { x: 13, y: 64, side: 'left',  label: { en: 'Vacuuming part',    tr: 'Emiş parçası' } },
+          { x: 22, y: 71, side: 'left',  label: { en: 'Dust bin',          tr: 'Toz haznesi' } },
+          // Sağ küçük patlamış görünüm (taban modülü)
+          { x: 74, y: 47, side: 'right', label: { en: 'Filter',            tr: 'Filtre' } },
+          { x: 74, y: 53, side: 'right', label: { en: 'Support wall',      tr: 'Destek duvarı' } },
+          { x: 74, y: 60, side: 'right', label: { en: 'Fan',               tr: 'Fan' } },
+          { x: 74, y: 65, side: 'right', label: { en: 'Motor',             tr: 'Motor' } },
+          { x: 74, y: 72, side: 'right', label: { en: 'Air intake grille', tr: 'Hava giriş ızgarası' } },
+          { x: 74, y: 79, side: 'right', label: { en: 'Under ground level',tr: 'Zemin altı' } },
+        ],
       },
     ],
   },

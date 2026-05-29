@@ -815,6 +815,119 @@
 }
 
 /* ============================================
+   WIDE callout variant - The Product gibi sol yaslı başlık + body,
+   altta tam genişlik image + üzerinde pointer'lar
+   (AirStride Dashboard View + Concept Scheme)
+   ============================================ */
+.project-callout-wide .project-callout-wide-media {
+  position: relative;
+  width: 100%;
+  margin-top: var(--space-6);
+  /* Etiketler için iki yandan nefes payı */
+  padding-inline: clamp(var(--space-4), 8vw, 140px);
+}
+
+.project-callout-wide-media .callout-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-callout-wide-media .callout-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 880px) {
+  .project-callout-wide .project-callout-wide-media {
+    padding-inline: var(--space-3);
+  }
+}
+
+/* ============================================
+   No-label-frame variant (Dashboard View)
+   Tamamen çerçevesiz, çoklu satır, leader line resim dışına çıkar
+   --callout-line ve --callout-label-w per-callout inline style ile gelir
+   ============================================ */
+.project-callout.is-no-label-frame .callout-image {
+  overflow: visible;
+}
+
+/* Leader line - per callout uzunlukta, resim dışına uzanır */
+.project-callout.is-no-label-frame .callout-line {
+  width: var(--callout-line, 220px);
+  height: 1.5px;
+  background: linear-gradient(to right,
+    var(--color-accent) 0%,
+    var(--color-accent) 80%,
+    rgba(92, 26, 27, 0.45) 100%);
+}
+
+.project-callout.is-no-label-frame .callout-side-left .callout-line {
+  background: linear-gradient(to left,
+    var(--color-accent) 0%,
+    var(--color-accent) 80%,
+    rgba(92, 26, 27, 0.45) 100%);
+}
+
+/* Label - çerçevesiz, çoklu satır, line ucuna oturuyor */
+.project-callout.is-no-label-frame .callout-label {
+  position: absolute;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 0;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  white-space: normal;
+  color: var(--color-text);
+  width: var(--callout-label-w, 220px);
+  max-width: var(--callout-label-w, 220px);
+}
+
+.project-callout.is-no-label-frame .callout-side-right .callout-label {
+  /* line bitiminden hemen sonra, üst hizada */
+  left: calc(var(--callout-line, 220px) + 10px);
+  top: calc(-0.5 * var(--callout-label-w, 220px) * 0);
+  /* Satır kalınlığı orta — label'i biraz üste kaydır */
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.project-callout.is-no-label-frame .callout-side-left .callout-label {
+  right: calc(var(--callout-line, 220px) + 10px);
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+@media (max-width: 880px) {
+  .project-callout.is-no-label-frame .callout-line {
+    width: calc(var(--callout-line, 220px) * 0.55);
+  }
+  .project-callout.is-no-label-frame .callout-side-right .callout-label {
+    left: calc(var(--callout-line, 220px) * 0.55 + 8px);
+  }
+  .project-callout.is-no-label-frame .callout-side-left .callout-label {
+    right: calc(var(--callout-line, 220px) * 0.55 + 8px);
+  }
+  .project-callout.is-no-label-frame .callout-label {
+    width: calc(var(--callout-label-w, 220px) * 0.75);
+    max-width: calc(var(--callout-label-w, 220px) * 0.75);
+    font-size: 0.65rem;
+  }
+}
+
+/* ============================================
    IN-ACTION LAYOUT - steam efektli final section
    ============================================ */
 
@@ -841,9 +954,11 @@
 .steam-puff {
   position: absolute;
   border-radius: 50%;
-  filter: blur(25px);
+  filter: blur(18px);
   will-change: transform, opacity;
   mix-blend-mode: screen;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* GPU layer */
 }
 
 /* Buhar urunun sol ucundan cikar - sag tarafta orta hizada başlar (~55-65% x, 25-40% y) */
@@ -881,27 +996,9 @@
   animation: steamRise3 14s linear infinite;
   animation-delay: -5.5s;
 }
-.steam-puff-4 {
-  width: 420px; height: 340px;
-  left: 55%; top: 50%;
-  background: radial-gradient(circle at 30% 60%,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.6) 25%,
-    rgba(255, 255, 255, 0.25) 55%,
-    transparent 80%);
-  animation: steamRise4 11s linear infinite;
-  animation-delay: -7s;
-}
+.steam-puff-4,
 .steam-puff-5 {
-  width: 800px; height: 540px;
-  left: 5%; top: 30%;
-  background: radial-gradient(ellipse at 60% 50%,
-    rgba(255, 255, 255, 0.65) 0%,
-    rgba(255, 255, 255, 0.3) 40%,
-    rgba(255, 255, 255, 0.1) 65%,
-    transparent 82%);
-  animation: steamRise5 15s linear infinite;
-  animation-delay: -10s;
+  display: none; /* 5 puff yerine 3 — performans için */
 }
 
 /* Her puff farkli yorunge - gercekci buhar hareketi */
@@ -1022,8 +1119,11 @@
 .product-steam-jet {
   position: absolute;
   border-radius: 50%;
-  filter: blur(14px);
+  filter: blur(10px);
   mix-blend-mode: screen;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* Jet kaynak noktası: ürünün sol-üst ucu (right: 15-25%) */
@@ -1049,14 +1149,7 @@
   animation-delay: -1.3s;
 }
 .product-steam-jet-3 {
-  width: 460px; height: 250px;
-  right: 45%; top: 50%;
-  background: radial-gradient(ellipse at 60% 50%,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0.4) 40%,
-    transparent 78%);
-  animation: productJet3 6s ease-out infinite;
-  animation-delay: -3s;
+  display: none; /* 3. jet (en geniş) disabled */
 }
 
 @keyframes productJet1 {

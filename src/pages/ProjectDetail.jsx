@@ -23,11 +23,20 @@ function CalloutImage({ src, alt, callouts = [], lang }) {
           ? c.label
           : (c.label?.[lang] ?? c.label?.en ?? '');
         const side = c.side || 'right';
+        const style = { left: `${c.x}%`, top: `${c.y}%` };
+        if (c.lineLength != null) {
+          const v = typeof c.lineLength === 'number' ? `${c.lineLength}px` : c.lineLength;
+          style['--callout-line'] = v;
+        }
+        if (c.labelWidth != null) {
+          const w = typeof c.labelWidth === 'number' ? `${c.labelWidth}px` : c.labelWidth;
+          style['--callout-label-w'] = w;
+        }
         return (
           <div
             key={i}
             className={`callout-marker callout-side-${side}`}
-            style={{ left: `${c.x}%`, top: `${c.y}%` }}
+            style={style}
           >
             <span className="callout-dot-ring" aria-hidden="true" />
             <span className="callout-dot-inner" aria-hidden="true" />
@@ -245,8 +254,48 @@ export default function ProjectDetail() {
         if (layout === 'callout') {
           const reverse = !!sec.reverse;
           const isFirst = i === 0;
+          const noFrame = !!sec.noLabelFrame;
+          const isWide = !!sec.wide;
+
+          // WIDE varyant: The Product gibi - sol yaslı başlık + body, altta tam genişlik image
+          if (isWide) {
+            return (
+              <section
+                className={`section project-callout project-callout-wide ${noFrame ? 'is-no-label-frame' : ''}`}
+                key={i}
+              >
+                <div className="container">
+                  <motion.header
+                    className="project-section-header"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-80px' }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2>{tr(sec.title, lang)}</h2>
+                  </motion.header>
+                  {sec.body && <p className="project-section-body">{tr(sec.body, lang)}</p>}
+                  <motion.div
+                    className="project-callout-wide-media"
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <CalloutImage
+                      src={sec.image}
+                      alt={tr(sec.title, lang)}
+                      callouts={sec.callouts}
+                      lang={lang}
+                    />
+                  </motion.div>
+                </div>
+              </section>
+            );
+          }
+
           return (
-            <section className={`section project-callout ${reverse ? 'is-reverse' : ''} ${isFirst ? 'is-first-callout' : ''}`} key={i}>
+            <section className={`section project-callout ${reverse ? 'is-reverse' : ''} ${isFirst ? 'is-first-callout' : ''} ${noFrame ? 'is-no-label-frame' : ''}`} key={i}>
               <div className="container project-callout-grid">
                 <motion.div
                   className="project-callout-media"
